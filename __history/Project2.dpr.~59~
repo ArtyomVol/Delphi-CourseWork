@@ -1,0 +1,12 @@
+library Project2;
+
+uses
+  System.SysUtils,
+  System.Classes,
+  Windows;
+
+
+{$R *.res}
+
+begin
+end.

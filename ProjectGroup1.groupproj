@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{1362A903-C642-4BC4-B576-1B8DFB8F7809}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="DecomposeTimeProcess.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ComponentsInitializing.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DecomposeTimeProcess">
+        <MSBuild Projects="DecomposeTimeProcess.dproj"/>
+    </Target>
+    <Target Name="DecomposeTimeProcess:Clean">
+        <MSBuild Projects="DecomposeTimeProcess.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DecomposeTimeProcess:Make">
+        <MSBuild Projects="DecomposeTimeProcess.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ComponentsInitializing">
+        <MSBuild Projects="ComponentsInitializing.dproj"/>
+    </Target>
+    <Target Name="ComponentsInitializing:Clean">
+        <MSBuild Projects="ComponentsInitializing.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ComponentsInitializing:Make">
+        <MSBuild Projects="ComponentsInitializing.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DecomposeTimeProcess;ComponentsInitializing"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DecomposeTimeProcess:Clean;ComponentsInitializing:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DecomposeTimeProcess:Make;ComponentsInitializing:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

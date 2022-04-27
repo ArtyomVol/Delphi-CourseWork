@@ -1,0 +1,129 @@
+unit COMDecomposingTimeProcess_TLB;
+
+// ************************************************************************ //
+// WARNING
+// -------
+// The types declared in this file were generated from data read from a
+// Type Library. If this type library is explicitly or indirectly (via
+// another type library referring to this type library) re-imported, or the
+// 'Refresh' command of the Type Library Editor activated while editing the
+// Type Library, the contents of this file will be regenerated and all
+// manual modifications will be lost.
+// ************************************************************************ //
+
+// $Rev: 52393 $
+// File generated on 01.05.2021 20:23:54 from Type Library described below.
+
+// ************************************************************************  //
+// Type Lib: D:\Моё\Лабараторные\2 Курс\РПВС\COM\Project1 (1)
+// LIBID: {1EBEC490-4E2C-4963-8CA6-C14C266E8945}
+// LCID: 0
+// Helpfile:
+// HelpString:
+// DepndLst:
+//   (1) v2.0 stdole, (C:\Windows\SysWOW64\stdole2.tlb)
+// SYS_KIND: SYS_WIN32
+// Errors:
+//   Hint: TypeInfo 'COMDecomposingTimeProcess' changed to 'COMDecomposingTimeProcess_'
+// ************************************************************************ //
+{$TYPEDADDRESS OFF} // Unit must be compiled without type-checked pointers.
+{$WARN SYMBOL_PLATFORM OFF}
+{$WRITEABLECONST ON}
+{$VARPROPSETTER ON}
+{$ALIGN 4}
+
+interface
+
+uses Winapi.Windows, System.Classes, System.Variants, System.Win.StdVCL,
+  Vcl.Graphics, Vcl.OleServer, Winapi.ActiveX,
+  Vcl.Forms, VCLTee.Series;
+
+
+// *********************************************************************//
+// GUIDS declared in the TypeLibrary. Following prefixes are used:
+//   Type Libraries     : LIBID_xxxx
+//   CoClasses          : CLASS_xxxx
+//   DISPInterfaces     : DIID_xxxx
+//   Non-DISP interfaces: IID_xxxx
+// *********************************************************************//
+const
+  // TypeLibrary Major and minor versions
+  COMDecomposingTimeProcessMajorVersion = 1;
+  COMDecomposingTimeProcessMinorVersion = 0;
+
+  LIBID_COMDecomposingTimeProcess: TGUID = '{1EBEC490-4E2C-4963-8CA6-C14C266E8945}';
+
+  IID_ICOMDecomposingTimeProcess: TGUID = '{BA559B20-D204-468A-AD33-CDB6F483E1FD}';
+  CLASS_COMDecomposingTimeProcess_: TGUID = '{4E5277A8-8EFE-4EAE-AE7A-1666B2F2D0F4}';
+type
+
+// *********************************************************************//
+// Forward declaration of types defined in TypeLibrary
+// *********************************************************************//
+  ICOMDecomposingTimeProcess = interface;
+//  ICOMDecomposingTimeProcessDisp = dispinterface;
+
+// *********************************************************************//
+// Declaration of CoClasses defined in Type Library
+// (NOTE: Here we map each CoClass to its Default Interface)
+// *********************************************************************//
+  COMDecomposingTimeProcess_ = ICOMDecomposingTimeProcess;
+
+
+// *********************************************************************//
+// Interface: ICOMDecomposingTimeProcess
+// Flags:     (4416) Dual OleAutomation Dispatchable
+// GUID:      {BA559B20-D204-468A-AD33-CDB6F483E1FD}
+// *********************************************************************//
+  ICOMDecomposingTimeProcess = interface(IDispatch)
+    ['{BA559B20-D204-468A-AD33-CDB6F483E1FD}']
+
+    procedure Create(AP, AX, AIntialTimeMoment, AEndTimeMoment,
+      ATimeChangeStep, AOmega: real; ARepaintCount: integer); safecall;
+
+    procedure DrawDecomposingToTrigonometricRow(Series: TLineSeries;
+    Form: TForm; isAnimated: boolean); safecall;
+    function GetDecomposingTimeProcessData(): string; safecall;
+  end;
+
+// *********************************************************************//
+// DispIntf:  ICOMDecomposingTimeProcessDisp
+// Flags:     (4416) Dual OleAutomation Dispatchable
+// GUID:      {BA559B20-D204-468A-AD33-CDB6F483E1FD}
+// *********************************************************************//
+//  ICOMDecomposingTimeProcessDisp = dispinterface
+//    ['{BA559B20-D204-468A-AD33-CDB6F483E1FD}']
+{    procedure Create(AP: Single; AX: Single; AIntialTimeMoment: Single; AEndTimeMoment: Single;
+                     ATimeChangeStep: Single; AOmega: Single; ARepaintCount: SYSINT); dispid 201;
+    procedure DrawDecomposingToTrigonometricRow(Series: Integer; Form: OleVariant;
+                                                IsAnimated: WordBool); dispid 202;
+  end;
+}
+// *********************************************************************//
+// The Class CoCOMDecomposingTimeProcess_ provides a Create and CreateRemote method to
+// create instances of the default interface ICOMDecomposingTimeProcess exposed by
+// the CoClass COMDecomposingTimeProcess_. The functions are intended to be used by
+// clients wishing to automate the CoClass objects exposed by the
+// server of this typelibrary.
+// *********************************************************************//
+  CoCOMDecomposingTimeProcess_ = class
+    class function Create: ICOMDecomposingTimeProcess;
+    class function CreateRemote(const MachineName: string): ICOMDecomposingTimeProcess;
+  end;
+
+implementation
+
+uses System.Win.ComObj;
+
+class function CoCOMDecomposingTimeProcess_.Create: ICOMDecomposingTimeProcess;
+begin
+  Result := CreateComObject(CLASS_COMDecomposingTimeProcess_) as ICOMDecomposingTimeProcess;
+end;
+
+class function CoCOMDecomposingTimeProcess_.CreateRemote(const MachineName: string): ICOMDecomposingTimeProcess;
+begin
+  Result := CreateRemoteComObject(MachineName, CLASS_COMDecomposingTimeProcess_) as ICOMDecomposingTimeProcess;
+end;
+
+end.
+

@@ -1,0 +1,23 @@
+library AboutForm;
+
+uses
+  System.SysUtils,
+  System.Classes,
+  Vcl.Forms,
+  UnitAbout in 'UnitAbout.pas' {Form5};
+
+{$R *.res}
+
+//показать форму
+procedure ShowAbout(AOwner:TComponent);  stdcall;
+var
+Form:TForm5;
+begin
+  Form:=TForm5.Create(AOwner); //создать форму
+  Form.ShowModal; //показать форму
+  Form.Free; //уничтожить форму
+end;
+
+exports ShowAbout;
+begin
+end.

@@ -1,0 +1,98 @@
+unit DemandingTimeProcess;
+
+interface
+
+uses
+  Vcl.Dialogs;
+
+type
+  TDemandingTimeProcess = class
+    private P: real; // переменная P (в ньютонах) ??????
+    private x: real; // переменная x (в метрах) ????????
+    private intialTimeMoment: real; // начальный момент времени (в секундах)
+    private endTimeMoment: real; // конечный момент времени (в секундах)
+    private timeChangeStep: real; // шаг изменения времени (в секундах)
+
+    private function getP(): real;
+    private procedure setP(AP: real);
+    public Property AP: real read getP write setP;
+    private function getX(): real;
+    private procedure setX(AX: real);
+    public Property AX: real read getX write setX;
+    private function getIntialTimeMoment(): real;
+    private procedure setIntialTimeMoment(AIntialTimeMoment: real);
+    public Property AIntialTimeMoment: real read getIntialTimeMoment
+     write setIntialTimeMoment;
+    private function getEndTimeMoment(): real;
+    private procedure setEndTimeMoment(AEndTimeMoment: real);
+    public Property AEndTimeMoment: real read getEndTimeMoment
+     write setEndTimeMoment;
+    private function getTimeChangeStep(): real;
+    private procedure setTimeChangeStep(ATimeChangeStep: real);
+    public Property ATimeChangeStep: real read getTimeChangeStep
+     write setTimeChangeStep;
+  end;
+
+implementation
+
+function TDemandingTimeProcess.getP;
+begin
+  result := P;
+end;
+
+procedure TDemandingTimeProcess.setP(AP: Real);
+begin
+  if AP > 0 then begin
+    P := AP;
+  end
+  else begin
+    ShowMessage('P должно быть положительным.');
+  end;
+end;
+
+function TDemandingTimeProcess.getX;
+begin
+  result := x;
+end;
+
+procedure TDemandingTimeProcess.setX(AX: Real);
+begin
+  if AX > 0 then begin
+    x := AX;
+  end
+  else begin
+    ShowMessage('X должно быть положительным.');
+  end;
+end;
+
+function TDemandingTimeProcess.getIntialTimeMoment;
+begin
+  result := IntialTimeMoment;
+end;
+
+procedure TDemandingTimeProcess.setIntialTimeMoment(AIntialTimeMoment: Real);
+begin
+  if AIntialTimeMoment > 0 then begin
+    IntialTimeMoment := AIntialTimeMoment;
+  end
+  else begin
+    ShowMessage('Начальное время должно быть положительным.');
+  end;
+end;
+
+function TDemandingTimeProcess.getEndTimeMoment;
+begin
+  result := EndTimeMoment;
+end;
+
+procedure TDemandingTimeProcess.setEndTimeMoment(AEndTimeMoment: Real);
+begin
+  if AEndTimeMoment > 0 then begin
+    EndTimeMoment := AEndTimeMoment;
+  end
+  else begin
+    ShowMessage('Конечное время должно быть положительным.');
+  end;
+end;
+
+end.

@@ -1,0 +1,23 @@
+library Project2;
+
+uses
+  System.SysUtils,
+  System.Classes,
+  Windows,
+  Unit4 in 'Unit4.pas' {Form4};
+
+procedure ShowIntro(AOwner: TComponent); stdcall;
+var
+  MyForm : TForm4;
+begin
+  MyForm := TForm4.Create(AOwner);
+  MyForm.ShowModal;
+  MyForm.Free;
+  MyForm.
+end;
+
+{$R *.res}
+
+exports ShowIntro;
+begin
+end.

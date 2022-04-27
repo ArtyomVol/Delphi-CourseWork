@@ -1,0 +1,38 @@
+unit DemandingTimeProcess;
+
+interface
+
+uses
+  Vcl.Dialogs;
+
+type
+  TDemandingTimeProcess = class
+    private P: real; // переменная P (в ньютонах) ??????
+    private x: real; // переменная x (в метрах) ????????
+    private intialTimeMoment: real; // начальный момент времени (в секундах)
+    private endTimeMoment: real; // конечный момент времени (в секундах)
+    private timeChangeStep: real; // шаг изменения времени (в секундах)
+
+    private function getP(): real;
+    private procedure setP(AP: real);
+    public Property AP: real read getP write setP;
+  end;
+
+implementation
+
+function TDemandingTimeProcess.getP;
+begin
+  result := P;
+end;
+
+procedure TDemandingTimeProcess.setP(AP: Real);
+begin
+  if AP > 0 then begin
+    P := AP;
+  end
+  else begin
+    ShowMessage('P должно быть положительным.');
+  end;
+end;
+
+end.

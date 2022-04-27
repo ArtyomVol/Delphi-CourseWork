@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.005,=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.746,=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.306,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Unit2.pas=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Cheking.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.163,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Unit2.pas=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\DemandingTimeProcessInTrigonometricRow.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.839,=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.353,=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.441,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\DynamicallyCreatingFormComponents.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.258,=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\DynamicallyCreatingFormComponents.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.557,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\About.dfm=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Unit4.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.653,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\About.dfm=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Unit4.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.340,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Unit2.dfm=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\UnitTableView.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.340,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Unit2.pas=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\UnitTableView.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.274,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\DemandingTimeProcessInTrigonometricRow.pas=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\DemandingTimeProcess.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.484,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\ColorChangeForm.dfm=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Unit3.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.524,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\ColorChangeForm.dfm=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\UnitColorChange.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.690,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\AboutForm.dfm=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\About.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.002,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\AboutForm.dfm=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\UnitAbout.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.014,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Cheking.pas=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\CheckingComboBoxText.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.014,=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.982,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Unit4.pas=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\About.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.959,=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.463,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\TableViewForm.pas=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.522,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\TableViewForm.pas=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\UnitTableView.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.188,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\UnitAbout.pas=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\UnitSplash.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.487,C:\Users\avolo\Documents\Embarcadero\Studio\Projects\Unit1.pas=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.760,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\UnitTableView.pas=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.487,C:\Users\avolo\Documents\Embarcadero\Studio\Projects\Unit1.dfm=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.002,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\AboutForm.pas=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\UnitAbout.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.760,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\UnitTableView.dfm=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.468,=C:\Users\avolo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.653,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\About.pas=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.557,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\About.pas=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.659,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\MainForm.dfm=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.572,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\DemandingTimeProcess.pas=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\DecomposingTimeProcess.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.605,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Project1.dproj=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\DecomposeTimeProcess.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.718,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\UnitMain.pas=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\MainForm.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.463,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\TableViewForm.dfm=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.522,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\TableViewForm.dfm=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\UnitTableView.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.484,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\ColorChangeForm.pas=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.524,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\ColorChangeForm.pas=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\UnitColorChange.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.402,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\CheckingComboBoxText.pas=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\ComboBoxActions.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.982,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Unit4.dfm=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\About.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.690,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\AboutForm.pas=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\About.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.188,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\UnitAbout.dfm=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\UnitSplash.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.659,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\MainForm.pas=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.718,D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\UnitMain.dfm=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\MainForm.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.024,C:\Users\avolo\Documents\Embarcadero\Studio\Projects\Project1.dproj=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\Project1.dproj</Transaction>
+    <Transaction>2021.05.07 11:51:35.731,=D:\Моё\Лабараторные\2 Курс\РПВС\курсовая\UnitAbout.pas</Transaction>
+  </Transactions>
+</BorlandProject>

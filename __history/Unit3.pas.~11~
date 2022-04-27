@@ -1,0 +1,54 @@
+unit Unit3;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, VCLTee.Series;
+
+type
+  TForm3 = class(TForm)
+    ComboBox1: TComboBox;
+    Label1: TLabel;
+    ColorDialog1: TColorDialog;
+    Button1: TButton;
+    procedure Button1Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public                        
+    graphs: TList; // список нарисованных графиков
+  end;
+
+var
+  Form3: TForm3;   
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm3.Button1Click(Sender: TObject);
+begin
+  if ColorDialog1.Execute then begin
+    
+  end
+end;
+
+procedure TForm3.FormShow(Sender: TObject);
+var
+  i: integer;
+  series: TLineSeries;
+begin
+  ComboBox1.Items.Clear;
+  if graphs.Count > 0 then begin         
+    for i := 0 to graphs.Count - 1 do begin
+      series := graphs.Items[i];
+      ComboBox1.Items.Add(series.Title);
+    end;    
+    ComboBox1.Text := ComboBox1.Items[0];
+  end;
+end;
+
+end.
+
+

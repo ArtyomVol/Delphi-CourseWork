@@ -1,0 +1,12 @@
+library AboutForm;
+
+uses
+  System.SysUtils,
+  System.Classes,
+  Vcl.Forms,
+  UnitAbout in 'UnitAbout.pas' {Form5};
+
+{$R *.res}
+
+begin
+end.

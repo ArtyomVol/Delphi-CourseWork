@@ -1,0 +1,16 @@
+unit DemandingTimeProcess;
+
+interface
+
+type
+  TDemandingTimeProcess = class
+    P: real; // переменная P (в ньютонах) ??????
+    x: real; // переменная x (в метрах) ????????
+    intialTimeMoment: real; // начальный момент времени (в секундах)
+    endTimeMoment: real; // конечный момент времени (в секундах)
+    timeChangeStep: real; // шаг изменения времени (в секундах)
+  end;
+
+implementation
+
+end.

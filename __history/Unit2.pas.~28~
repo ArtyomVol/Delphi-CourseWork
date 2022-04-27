@@ -1,0 +1,139 @@
+unit Unit2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+  Vcl.ComCtrls, Vcl.Grids, Vcl.StdCtrls, VclTee.Series;
+
+type
+  TForm2 = class(TForm)
+    PageControl1: TPageControl;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormCreate(Sender: TObject);
+    procedure FormCanResize(Sender: TObject; var NewWidth, NewHeight: Integer;
+      var Resize: Boolean);
+  private
+    procedure loadProcedureFromDLL();
+    procedure initializeStringGrid(StringGrid: TStringGrid; Parent: TWinControl;
+      Left, Top, Width, Height, ColCount, RowCount: Integer);
+    procedure initializeTabSheet(TabSheet: TTabSheet; PageControl: TPageControl;
+      Left, Top, Width, Height: Integer; Caption: TCaption);
+  public
+    procedure AddNewSheet(Series: TLineSeries);
+    { Public declarations }
+  end;
+  TInitializeStringGrid = procedure (StringGrid: TStringGrid;
+  Parent: TWinControl; Left, Top, Width, Height, ColCount,
+  RowCount: Integer); stdcall;
+  TInitializeTabSheet = procedure (TabSheet: TTabSheet;
+  PageControl: TPageControl; Left: Integer; Top: Integer; Width: Integer;
+  Height: Integer; Caption: TCaption); stdcall;
+
+var
+  Form2: TForm2;
+  HLib: THandle;
+  InitializeStringGrid: TInitializeStringGrid;
+  InitializeTabSheet: TInitializeTabSheet;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm2.AddNewSheet(Series: TLineSeries);
+var
+  TabSheet: TTabSheet;
+  StringGrid: TStringGrid;
+  i: integer;
+begin
+  TabSheet := TTabSheet.Create(PageControl1);
+  initializeTabSheet(TabSheet, PageControl1, 4, 24, 1085, 101, Series.Title);
+  StringGrid := TStringGrid.Create(TabSheet);
+  initializeStringGrid(StringGrid, TabSheet, 3, 3, 1085, 97,
+    Series.XValues.Count + 1, 3);
+  StringGrid.Cells[0,1] := 'x';
+  StringGrid.Cells[0,2] := 'y';
+  for i:=1 to Series.XValues.Count + 1 do
+  begin
+    StringGrid.Cells[i, 0] := intToStr(i);
+    StringGrid.Cells[i, 1] := floatToStrf(Series.XValues[i-1], ffFixed, 8, 3);
+    StringGrid.Cells[i, 2] := floatToStrf(Series.YValues[i-1], ffFixed, 8, 3);
+  end;
+end;
+
+procedure TForm2.FormCanResize(Sender: TObject; var NewWidth,
+  NewHeight: Integer; var Resize: Boolean);
+begin
+  NewHeight := 174;
+  NewWidth := 1121;
+end;
+
+procedure TForm2.FormClose(Sender: TObject; var Action: TCloseAction);
+var
+  i: integer;
+begin
+  for i := 0 to PageControl1.PageCount - 1 do
+  begin
+    PageControl1.Pages[0].Destroy;
+  end;
+end;
+
+procedure TForm2.FormCreate(Sender: TObject);
+begin
+  Form2.Color := rgb(250, 246, 205);
+end;
+
+procedure TForm2.initializeStringGrid(StringGrid: TStringGrid; Parent: TWinControl;
+  Left, Top, Width, Height, ColCount, RowCount: Integer);
+begin
+  StringGrid.Parent := Parent;
+  StringGrid.Left := Left;
+  StringGrid.Top := Top;
+  StringGrid.Width := Width;
+  StringGrid.Height := Height;
+  StringGrid.ColCount := ColCount;
+  StringGrid.RowCount := RowCount;
+end;
+
+procedure TForm2.initializeTabSheet(TabSheet: TTabSheet; PageControl: TPageControl;
+Left: Integer; Top: Integer; Width: Integer; Height: Integer;
+Caption: TCaption);
+begin
+  TabSheet.Parent := PageControl;
+  TabSheet.PageControl := PageControl;
+  PageControl.SelectNextPage(True);
+  TabSheet.Left := Left;
+  TabSheet.Top := Top;
+  TabSheet.Width := Width;
+  TabSheet.Height := Height;
+  TabSheet.Caption := Caption;
+end;
+
+procedure TForm2.loadProcedureFromDLL;
+begin
+  // загрузка DLL
+  HLib := 0;
+  HLib := LoadLibrary('Project2.dll');
+  // HLob <- номер библиотеки
+  if HLib = 0 then
+  begin
+    MessageBox(0,'Ѕиблиотека Project2.dll не найдена', 'ќшибка', mb_Ok);
+//    Halt; // почему-то не завершает процесс (в диспетчере задач остаЄтс¤)
+    Form2.CloseModal;
+    Exit;
+  end;
+  @AShowForm := GetProcAddress(HLib, 'ShowMyForm');
+  if Assigned(AShowForm) then
+  begin
+    Series1.Color := AShowForm(Owner);
+  end
+  else
+  begin
+    MessageBox(0, 'ћетод ShowMyForm в библиотеке Project2.dll не найден',
+    'ќшибка', mb_Ok);
+  end;
+  FreeLibrary(HLib);
+end;
+
+end.
